@@ -1,4 +1,5 @@
 from haversine import haversine
+import datetime
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
@@ -88,9 +89,9 @@ st.sidebar.markdown('## Selecione uma data limite')
 
 date_slider = st.sidebar.slider(
     'Até qual valor?',
-    value = pd.datetime(2022, 3, 1),
-    min_value = pd.datetime(2022, 2, 11),
-    max_value = pd.datetime(2022, 4, 13),
+    value = datetime.datetime(2022, 3, 1),
+    min_value = datetime.datetime(2022, 2, 11),
+    max_value = datetime.datetime(2022, 4, 13),
     format='DD-MM-YYYY'
                     )
 #FILTRO DE DATA
